@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+</head>
+
+<body>
+    <form action="" name="">
+
+        <fieldset>
+            <legend> Cadastro </legend>
+            <label> Entre com o seu nome</label>
+            <input type="text" name="nome" maxlength="50" size="50" id="cadastro">
+            <br><br>
+
+            <label> E-mail</label>
+            <input type="email" name="nome" maxlength="50" size="50" id="cadastro">
+            <br><br>
+
+            <label> Senha </label>
+            <input type="password" name="nome" maxlength="10" size="10" id="cadastro">
+            <br><br>
+
+            <label> Você utiliza este site frequentemente? </label>
+            <input type="radio" name="resp" value="sim"> Sim
+            <input type="radio" name="resp" value="nao"> Não
+            <br><br>
+
+            <label> Você utiliza este site frequentemente? </label>
+            <input type="radio" name="resp" value="sim"> Sim
+            <input type="radio" name="resp" value="nao"> Não
+            <br><br>
+
+            <label> Qual Browser você costuma utilizar? </label>
+            <input type="checkbox" name="opcao1" value="fire"> Firefox
+            <input type="checkbox" name="opcao2" value="Opera"> Opera
+            <input type="checkbox" name="opcao3" value="chrome"> Chrome
+            <input type="checkbox" name="opcao4" value="safari"> Safari
+            <input type="checkbox" name="opcao5" value="edge"> Edge
+            <br><br>
+
+            <label> Selecione uma área de atuação </label>
+            <select name="opcao">
+                <option value="mark">Marketing</option>
+                <option value="com">Comercial</option>
+                <option value="ven">Vendas</option>
+                <option value="web">Web</option>
+                <option value="adm">Administração</option>
+            </select>
+
+            <label> Entre com seu CPF:</label>
+            <input type="text" required placeholder="Digite aqui...">
+            <br><br>
+
+            
+            <label> Escolha uma data</label>
+            <input type="date">
+            <br><br>
+
+            <label> Selecione uma area de atuação </label>
+            <input type="dropdown">
+            <br><br>
+            
+            <label> Entre com seu CPF:</label>
+            <input type="date">
+            <br><br>
+
+            
+            <label>Escolha uma cor</label>
+            <input type="color">
+            <br><br>
+
+            <progress value="20" max="100"> 70%</progress>
+            <br><br>
+
+            <meter min="0" max="100" low="40" high="90" optimum="100" value="50"></meter>
+            <br><br>
+
+            <label> Deixe aqui o seu comentário</label>
+            <br>
+            <textarea cols="20" rows="10"  placeholder="Comente aqui:"></textarea>
+
+            <input type="submit" value="Enviar dados">
+            <input type="reset" value="Limpar campos">
+        </fieldset>
+    </form>
+</body>
+
+</html>

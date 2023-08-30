@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14/08</title>
+    <link rel="stylesheet" href="auladeHTML16.css" type="text/css">        
+    <!-- Script para slider -->
+
+    <style>
+
+        #mybgcarousel{ /* CSS for specific carousel container called #mybgcarousel. */
+        width:100%;
+        height:200px;
+        }
+        
+        /* ######### Shared CSS for various parts of carousel (in the event of multiple carousels) ######### */
+        
+        div.bgcarousel{ /* shared CSS for main carousel container */
+        background: black url(ajaxload.gif) center center no-repeat; /* loading gif while caoursel is loading */
+        }
+        
+        div.bgcarousel img.navbutton{ /* CSS for the nav buttons */
+        }
+        
+        div.bgcarousel div.slide{ /* CSS for each image's DIV container within main container */
+        background-color: black;
+        background-position: center center; /* center image within carousel */
+        background-repeat: no-repeat;
+        background-size: cover; /* CSS3 property to scale image within container? "cover" or "contain" */
+        color: black;
+        }
+        
+        div.bgcarousel div.selectedslide{ /* CSS for currently selected slide */
+        }
+        
+        div.bgcarousel div.slide div.desc{ /* DIV that contains the textual description inside .slide */
+        position: absolute;
+        color: white;
+        left: 40px;
+        top: 100px;
+        width:200px;
+        padding: 10px;
+        font: bold 16px sans-serif, Arial;
+        text-shadow: 0 -1px 1px #8a8a8a; /* CSS3 text shadow */
+        z-index:5;
+        }
+        
+        div.bgcarousel div.selectedslide div.desc{ /* CSS for currently selected slide's desc div */
+        }
+        
+        div.bgcarousel div.slide div.desc h2{
+        font-size:150%;
+        margin:0;
+        }
+        
+        div.bgcarousel div.slide div.desc a{
+        color:yellow;
+        text-decoration:none;
+        }
+        
+        </style>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="jquery.velocity.min.js"></script>
+        <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+        
+        <script src="bgcarousel.js" type="text/javascript">
+        
+        /***********************************************
+        * Background Image Carousel- (c) Dynamic Drive (www.dynamicdrive.com)
+        * Please keep this notice intact
+        * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+        ***********************************************/
+        
+        </script>
+        
+        <script type="text/javascript">
+        
+        var firstbgcarousel=new bgCarousel({
+            wrapperid: 'mybgcarousel', //ID of blank DIV on page to house carousel
+            imagearray: [
+                ['Imagens/tablet.jpeg'], //["image_path", "optional description"]
+                ['Imagens/iphone.jpeg'],
+                ['Imagens/videogame.jpeg'],
+                ['Imagens/camera.jpeg'] //<--no trailing comma after very last image element!
+            ],
+            displaymode: {type:'auto', pause:3000, cycles:2, stoponclick:false, pauseonmouseover:true},
+            navbuttons: ['left.gif', 'right.gif', 'up.gif', 'down.gif'], // path to nav images
+            activeslideclass: 'selectedslide', // CSS class that gets added to currently shown DIV slide
+            orientation: 'h', //Valid values: "h" or "v"
+            persist: true, //remember last viewed slide and recall within same session?
+            slideduration: 500 //transition duration (milliseconds)
+        })
+        
+        </script>
+        
+<!-- 
+['Imagens/tablet.jpeg'], //["image_path", "optional description"]
+['Imagens/iphone.jpeg'],
+['Imagens/videogame.jpeg'],
+['Imagens/camera.jpeg'] //<--no trailing comma after very last image element! -->
+
+    <!-- Script para zoom -->
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="jquery.magnifier.js">
+
+        /***********************************************
+        * jQuery Image Magnify- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+        * Please keep this notice intact
+        * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+        ***********************************************/
+
+    </script>
+
+    <!-- Script para sacudir a imagem -->
+    <style>
+        .shakeimage{
+        position:relative
+        }
+        </style>
+        <script language="JavaScript1.2">
+        
+        /*
+        Shake image script (onMouseover)- 
+        (c) Dynamic Drive (www.dynamicdrive.com)
+        For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+        */
+        
+        //configure shake degree (where larger # equals greater shake)
+        var rector=3
+        
+        ///////DONE EDITTING///////////
+        var stopit=0 
+        var a=1
+        
+        function init(which){
+        stopit=0
+        shake=which
+        shake.style.left=0
+        shake.style.top=0
+        }
+        
+        function rattleimage(){
+        if ((!document.all&&!document.getElementById)||stopit==1)
+        return
+        if (a==1){
+        shake.style.top=parseInt(shake.style.top)+rector+"px"
+        }
+        else if (a==2){
+        shake.style.left=parseInt(shake.style.left)+rector+"px"
+        }
+        else if (a==3){
+        shake.style.top=parseInt(shake.style.top)-rector+"px"
+        }
+        else{
+        shake.style.left=parseInt(shake.style.left)-rector+"px"
+        }
+        if (a<4)
+        a++
+        else
+        a=1
+        setTimeout("rattleimage()",50)
+        }
+        
+        function stoprattle(which){
+        stopit=1
+        which.style.left=0
+        which.style.top=0
+        }
+        
+        </script>
+</head>
+<body>
+   <div id="fundo">
+    <div id="titulo_pagina"> <h1>Curso de HTML5</h1></div>
+
+<div id="menu_superior">
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">Javascript</a>
+    <a href="#">Jquery</a>
+    <a href="#">Animação</a>
+    <a href="#">Formulários</a>
+</div>
+
+    <div id="menu_lateral">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">Javascript</a>
+        <a href="#">Jquery</a>
+        <a href="#">Animação</a>
+        <a href="#">Formulários</a>
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">Javascript</a>
+        <a href="#">Jquery</a>
+        <a href="#">Animação</a>
+    </div>
+
+<div id="centro">
+    <h1>Titulo do conteudo</h1>
+    <div id="mybgcarousel" class="bgcarousel"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim id expedita eos a qui, commodi accusantium, ea omnis voluptatem rerum recusandae voluptatibus veniam minima delectus. Tempora dicta voluptatibus eum sed.</p>
+    <img src="Imagens/estrada.jpeg" alt="Estrada" class="magnify" id="caixa1">
+    <img src="Imagens/tempo.jpeg" alt="Nuvens no céu" class="magnify" id="caixa2">
+    <img src="Imagens/paisagem.jpeg" alt="Sol com nuvens" class="magnify" id="caixa3">
+</div>
+
+  <div id="publi">
+    <img src="Imagens/bannercolar.jpeg" class="shakeimage" onMouseover="init(this);rattleimage()" onMouseout="stoprattle(this);top.focus()" onClick="top.focus()">
+  </div>  
+<div id="rodape">Rodapé</div>
+
+   </div> 
+</body>
+</html>

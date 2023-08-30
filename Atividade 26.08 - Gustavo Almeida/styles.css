@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    margin: auto auto;
+}
+
+header {
+    height: 15%;
+    max-width: 100%;
+    text-align: center;
+    background-color: #ccff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#linha{
+    width: 100%;
+    height: 20%;
+    background-color: #aaaa99;
+}
+
+header h1 {
+    font-size: clamp(1rem, 1rem + 10vw, 2rem);
+    font-weight: bold;
+}
+
+main {
+    height: 75%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaffff;
+}
+
+#esquerda {
+    background-color: #aaffcc;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#esquerda nav{
+    width: 95%;
+    height: 35%;
+    background-color: #fff;
+}
+
+#esquerda aside{
+    margin-top: 1rem;
+    width: 95%;
+    height: 35%;
+    background-color: #ffff00;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meio{
+    height: 100%;
+    width: 50%;
+    background-color: #aaffff;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#content-meio{
+    height: 100%;
+    width: 95%;
+    background-color: #99ff99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    width: 98%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h3{
+    text-align: center;
+    background-color: #ffff99;
+    width: 100%;
+    height: 5%;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#area-texto {
+    width: 100%;
+    height: 35%;
+    background-color: #cc6666;
+    margin-bottom: 1em;
+}
+
+#area-imagem {
+    width: 100%;
+    height: 35%;
+    background-color: #ccffff;
+}
+
+#direita {
+    background-color: #7c44ff;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#direita p {
+    width: 100%;
+    text-align: left;
+}
+
+footer {
+    background-color: #000;
+    max-width: 100%;
+    height: 10%;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 767px) {
+
+    main{
+        flex-direction: column;
+    }
+    
+    #esquerda{
+        width: 100%;
+    }
+
+    #direita{
+        width: 100%;
+    }
+
+    #esquerda nav{
+        height: 45%;
+    }
+    
+    #esquerda aside{
+        height: 45%;
+    }
+
+    #meio{
+        padding-top: 0.5rem;
+        width: 100%;
+    }
+    
+    h3{
+        height: 10%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 1024px) {
+        main{
+            flex-direction: column;
+        }
+        
+        #esquerda{
+            width: 100%;
+        }
+
+        #direita{
+            width: 100%;
+        }
+
+        #esquerda nav{
+            height: 45%;
+        }
+        
+        #esquerda aside{
+            height: 45%;
+        }
+
+        #meio{
+            padding-top: 0.5rem;
+            width: 100%;
+        }
+        
+        h3{
+            height: 10%;
+        }
+    }
+}
